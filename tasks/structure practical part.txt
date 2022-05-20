@@ -1,0 +1,15 @@
+partical part of thesis:
+
+	- define problem and data needed for calculations
+	- get financial data from the web
+	- feature engineering: build new features from given financial data
+	- explore sources for qualitative data: analysts views, quality of management
+	- do feature selection based on different correlation metrics
+	- do calclations of intrinsic value emit buy signals
+	- implement calcualtions in neural network and back propagate the calculations:
+		> calculate intrinsic value of all stocks in real time
+		> compare to current value of all stocks in real time
+		> emit buy once the margin of safety is above a previously defined threshold
+		> emit a sell signal once the current price exceeds the intrinsic value
+		> track performance of holding windows over past data
+	- How do my implementations help me answer the research question(s)

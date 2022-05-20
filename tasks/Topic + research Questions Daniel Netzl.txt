@@ -1,0 +1,19 @@
+Title:
+Implementation and analysis of a machine learning approach to long-term values investing
+
+Subtitle:
+Minimize risk while maximizing cash flow through stock picking based on fundamental company data
+
+
+Goal of the thesis:
+The goal of this thesis is it to discover the possibilities of automating the value investing approach. Fundamental company data will be used to calculate the intrinsic
+value and will hold as a basis for determining if a stock is worth buying now. The
+aim is to beat the Vanguard FTSE All-World High Divididend Yield Index, which
+would be the author’s alternative choice of investing money. The second approach
+is considered as passive investing, only putting money on a regular basis into a
+low-cost index fund. Backpropagation will be used to train and evaluate the model
+on past and current data.
+It is of utmost importance for the model to perform well over long period of time,
+i.e. constantly over several years. Short-term success is mostly luck and can
+often not be reproduced. The thesis will not cover any technical analysis for speculative short-term predictions of stock movements. The results of the model will be
+evaluated on a yearly basis.

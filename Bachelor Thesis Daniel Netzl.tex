@@ -1,0 +1,249 @@
+\documentclass{imc-inf}
+
+\title{Implementation and analysis of a machine learning approach to long-term values investing}
+\subtitle{Minimize risk while maximizing cash flow through stock picking based on fundamental company data}
+\thesistype{Bachelor Thesis} % or Bachelor Expos\'e
+\author{Daniel Netzl}
+\supervisor{Dr. Supervisor Musterfrau}
+\copyrightyear{2021}
+\submissiondate{19.04.2023}
+\keywords {Data Analytics, Machine Learning, Stock Market, Value Investing, Data Mining} % add keywords here 
+
+
+
+% \usepackage{xyz}
+% ... add your own packages here!
+\usepackage{listings}
+\usepackage{subcaption}
+                              
+
+\begin{document}
+\frontmatter\maketitle{}
+
+
+\begin{declarations}\end{declarations}
+
+
+
+\begin{abstract}
+	Abstract paragraphs should be unindented. Abstract text must fit on a single page. Try to present the essence of your work here. 
+	
+	According to Wikipedia\footnote{https://en.wikipedia.org/}, An abstract is a brief summary of a research article, thesis, review, conference proceeding, or any in-depth analysis of a particular subject and is often used to help the reader quickly ascertain the paper's purpose \cite{988366}. When used, an abstract always appears at the beginning of a manuscript or typescript, acting as the point-of-entry for any given academic paper or patent application. Abstracting and indexing services for various academic disciplines are aimed at compiling a body of literature for that particular subject.
+	
+	It is usually not a good practice to include references and footnotes in an abstract. Abstracts must be independent of other works, concise and complete in itself. 
+	
+	It is also possible to write structured abstracts. These are abstracts with distinct, labeled sections (e.g., Introduction, Methods, Results, Discussion), which makes it easier for the reader to navigate easily through the content. 
+	
+\end{abstract}
+
+
+\addtoToC{Table of Contents}%
+\tableofcontents%
+\clearpage
+
+
+\addtoToC{List of Tables}%
+\listoftables
+\clearpage
+
+
+\addtoToC{List of Figures}%
+\listoffigures
+\clearpage
+
+
+%   MAIN MATTER  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter%
+
+\chapter{Introduction}\label{chap:introduction}
+
+\section{Motivation}
+-> Context or domain of your focus
+-> Problem or challenge or open issue of the context you are going to address
+-> Research questions and goals
+-> Sub-research questions (if you have any)
+The goal of this thesis is it to discover the possibilities of automating the value investing approach. Fundamental company data will be used to calculate the intrinsic value and will hold as a basis for determining if a stock is worth buying now. The aim is to beat the Vanguard FTSE All-World High Dividend Yield Index, which would be the author's alternative choice of investing money. The second approach is considered as passive investing, only putting money on a regular basis into a low-cost index fund. Backpropagation will be used to train and evaluate the model on past and current data. 
+
+It is of utmost importance for the model to perform well over long period of time, i.e. constantly over several years. Short-term success is mostly luck and cannot often not be reproduced. The thesis will not cover any technical analysis for speculative short-term predictions of stock movements. The results of the model will be evaluated on a yearly basis.
+\section{State of the art}
+Most relevant state of the art/state of practice
+Mention what is done by Firstauthorlastname et al. and what is needed to be done
+If needed you can refer to multiple related works
+
+\section{Background}
+Background knowledge needed to understand your model
+Briefly describe the methods that will be used in your model
+
+\section{Model}
+
+Describe how your model or approach will work
+Add a diagram about the model so that it helps audience to understand how it will work
+
+\section{Experimental Setup/Implementation}
+This slide can be one of the two types: experimental setup for data science or implementation details for tool development
+Experimental Setup:
+Plan -> how you will setup your experiment
+Optional -> if needed describe how you will define threshold
+Implementation details:
+Plan -> how you will develop the tool
+
+\section{Evaluation Plan}
+Plan -> how you will evaluate the developed tool or the model
+
+\section{Conclusion/Summary}
+
+Mention what will be the potential contribution of your thesis
+Repeat how the research questions will ba answered and/or how your research goals will be achieved
+
+
+\chapter{Example Chapter}
+This is only an example of a chapter! Anyways, all thesis should have a problem statement -- not necessarily as a separate chapter though. Only after you know the problem, it will be possible for you to evaluate the results of what you did. If you want to see examples of evaluations, have a look at how graph visualizations are evaluated here \cite{DBLP:journals/access/BurchHWPWH21}. 
+
+\section{Code and syntax highlighting}
+
+You may sometimes want to add code snippets to your thesis. You can do so by using \texttt{lstlisting}. Use this with care, as code should not be extensively presented in the thesis. Here is an example. 
+
+\begin{lstlisting}[language=Python]
+def addition ():
+    print("I am adding numbers here!")
+    n = float(input("Enter the number: "))
+    t = 0 // Total number enter
+    ans = 0
+    while n != 0:
+        ans = ans + n
+        t+=1
+        n = float(input("Enter another number (0 to end): "))
+    return [ans,t]
+\end{lstlisting}
+
+\section{Labels and References}
+See \autoref{chap:introduction} for interesting stuff and see a cool logo in \autoref{fig:logo}. If you are still not convinced, try adding a footnote\footnote{did you like it?}. Its easy to add citations, just use a bibtex file to list your references and cite them here like this~\cite{988366}. If you want to read a cool paper~\cite{DBLP:conf/euromicro/DhunganaHW20}, just contact the author of the paper. Haha, that was funny! 
+
+
+\section{Mathematical Equations and Expressions}
+Basic equations in  \LaTeX{} can be easily "programmed". Fermat's Last Theorem (sometimes called Fermat's conjecture, especially in older texts) states that no three positive integers a, b, and c satisfy the equation \[ a^n + b^n = c^n \] for any integer value of $n$ greater than $2$. The cases $n = 1$ and  $n = 1$  have been known since antiquity to have infinitely many solutions. And because its so much fun, here is an integral for you - thank me later!  
+
+\[ \int\limits_0^1 x^2 + y^2 \ dx \]
+
+Do you want a more complex formula, I have no idea what it means, but it looks pretty. 
+
+\[\oint_{i=1}^n \sum_{i=1}^{\infty} \frac{1}{n^s} 
+= \prod_p \frac{1}{1 - p^{-s}} \]
+
+
+\section{Enumerations and Descriptions}
+Here is a simple list: 
+\begin{enumerate}
+	\item The labels consists of sequential numbers.
+	\item The numbers starts at 1 with every call to the enumerate environment.
+\end{enumerate}
+
+Here is another list: 
+
+\begin{enumerate}
+	\item The labels consists of sequential numbers.
+	\begin{itemize}
+		\item The individual entries are indicated with a black dot, a so-called bullet.
+		\item The text in the entries may be of any length.
+	\end{itemize}
+	\item The numbers starts at 1 with every call to the enumerate environment.
+\end{enumerate}
+
+Maybe such descriptions are also useful. These look neat to me. What do you think? Oh, I forgot, this document is not a tutorial. 
+\begin{description}
+	\item[Short] This is a shorter item label, and some text that talks
+	about it. The text is wrapped into a paragraph, with successive
+	lines indented.
+	\item[Rather longer label] This is a longer item label.  As you can
+	see, the text is not started a specified distance in -- unlike
+	with other lists -- but is spaced a fixed distance from the end
+	of the label.
+\end{description}
+
+
+
+\section{Adding images}
+Adding a simple image is easy. Adding complex images is also easy. What is a complex image anyway? 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\textwidth]{imclogo.png}
+	\caption{IMC Logo}
+	\label{fig:logo}
+\end{figure}
+
+
+
+
+
+\begin{figure}[ht]
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		% include first image
+		\includegraphics[width=.8\linewidth]{imclogo.png}  
+		\caption{Put your sub-caption here}
+		\label{fig:sub-first}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		% include second image
+		\includegraphics[width=.8\linewidth]{imclogo.png}  
+		\caption{Put your sub-caption here}
+		\label{fig:sub-second}
+	\end{subfigure}
+	\caption{Including sub images! }
+	\label{fig:fig}
+\end{figure}
+
+\section{Tables}
+
+\begin{table}[ht]
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+	\hline
+	\multicolumn{4}{|c|}{Country List} \\
+	\hline
+	Country Name     or Area Name& ISO ALPHA 2 Code &ISO ALPHA 3 Code&ISO numeric Code\\
+	\hline
+	Afghanistan   & AF    &AFG&   004\\
+	Aland Islands&   AX  & ALA   &248\\
+	Albania &AL & ALB&  008\\
+	Algeria    &DZ & DZA&  012\\
+	American Samoa&   AS  & ASM&016\\
+	Andorra& AD  & AND   &020\\
+	Angola& AO  & AGO&024\\
+	\hline
+\end{tabular}
+\caption{\label{tab:table-name}Example table}
+\end{table}
+
+
+
+
+%   BACK MATTER  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   References and appendices. Appendices come after the bibliography and
+%   should be in the order that they are referred to in the text.
+%
+%   If you include figures, etc. in an appendix, be sure to use
+%
+%       \caption[]{...}
+%
+%   to make sure they are not listed in the List of Figures.
+%
+
+\backmatter%
+	\addtoToC{Bibliography}
+	\bibliographystyle{IEEEtran}
+	\bibliography{references}
+	
+
+\begin{appendices} % optional
+\chapter{Example Appendix 1}
+
+Appendices should be used for supplemental information that does not form part of the main research. Remember that figures and tables in appendices should not be listed in the List of Figures or List of Tables. 
+
+\chapter{Example Appendix 2}
+
+Appendices should be used for supplemental information that does not form part of the main research. Remember that figures and tables in appendices should not be listed in the List of Figures or List of Tables. 
+	
+\end{appendices}
+\end{document}
