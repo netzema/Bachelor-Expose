@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.2)  20 MAY 2022 08:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.2)  25 MAY 2022 16:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -539,7 +539,7 @@ LaTeX Info: Redefining \nameref on input line 20.
 \c@lstlisting=\count297
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<imclogo.png, id=71, 301.125pt x 69.25874pt>
+<imclogo.png, id=95, 301.125pt x 69.25874pt>
 File: imclogo.png Graphic file (type png)
 <use imclogo.png>
 Package pdftex.def Info: imclogo.png  used on input line 21.
@@ -600,19 +600,22 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `"Bachelor Thesis Daniel Netzl.toc"'.
 
- [6]
+ [6] [7]
 (Bachelor Thesis Daniel Netzl.lot)
 \tf@lot=\write5
 \openout5 = `"Bachelor Thesis Daniel Netzl.lot"'.
 
- [7
+ [8
 
 ] (Bachelor Thesis Daniel Netzl.lof)
 \tf@lof=\write6
 \openout6 = `"Bachelor Thesis Daniel Netzl.lof"'.
 
 
-[8
+[9
+
+] [10
+
 
 ]
 Chapter 1.
@@ -625,116 +628,115 @@ LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <24.88> not available
 (Font)              Font shape `T1/lmss/bx/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <90> not available
 (Font)              Font shape `T1/lmss/bx/n' tried instead on input line 58.
-
-Underfull \vbox (badness 1264) has occurred while \output is active []
-
  [1
-
-
 
 ]
 [2]
 Chapter 2.
+[3
+
+] [4] [5] [6]
+Chapter 3.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-04.
+26.
 (C:\Users\netzl\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (C:\Users\netzl\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Overfull \hbox (5.58446pt too wide) in paragraph at lines 115--116
+Overfull \hbox (5.58446pt too wide) in paragraph at lines 137--138
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
+LaTeX Warning: Reference `chap:introduction' on page 7 undefined on input line 
+142.
+
+
 Underfull \vbox (badness 4967) has occurred while \output is active []
 
- [3
+ [7
 
 ]
-[4]
+[8]
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-46.
+68.
  (C:\Users\netzl\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 File: imclogo.png Graphic file (type png)
 <use imclogo.png>
-Package pdftex.def Info: imclogo.png  used on input line 169.
+Package pdftex.def Info: imclogo.png  used on input line 191.
 (pdftex.def)             Requested size: 433.62001pt x 99.742pt.
 File: imclogo.png Graphic file (type png)
 <use imclogo.png>
-Package pdftex.def Info: imclogo.png  used on input line 182.
+Package pdftex.def Info: imclogo.png  used on input line 204.
 (pdftex.def)             Requested size: 173.44865pt x 39.89426pt.
 File: imclogo.png Graphic file (type png)
 <use imclogo.png>
-Package pdftex.def Info: imclogo.png  used on input line 189.
+Package pdftex.def Info: imclogo.png  used on input line 211.
 (pdftex.def)             Requested size: 173.44865pt x 39.89426pt.
 
-Overfull \hbox (2.54398pt too wide) in paragraph at lines 179--193
+Overfull \hbox (2.54398pt too wide) in paragraph at lines 201--215
 [][] [] 
  []
 
 
-Underfull \hbox (badness 5652) in paragraph at lines 204--204
+Underfull \hbox (badness 5652) in paragraph at lines 226--226
 []\T1/phv/m/n/12 Country Name
  []
 
 
-Underfull \hbox (badness 2726) in paragraph at lines 204--204
+Underfull \hbox (badness 2726) in paragraph at lines 226--226
 []\T1/phv/m/n/12 ISO AL-PHA 2
  []
 
 
-Underfull \hbox (badness 2726) in paragraph at lines 204--204
+Underfull \hbox (badness 2726) in paragraph at lines 226--226
 []\T1/phv/m/n/12 ISO AL-PHA 3
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
 []\T1/phv/m/n/12 ISO nu-meric
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--210
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 []\T1/phv/m/n/12 American
  []
 
-[5] [6] (Bachelor Thesis Daniel Netzl.bbl
+[9] [10] (Bachelor Thesis Daniel Netzl.bbl
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 26.
-) [7
+) [11
 
 
-] [8
+] [12
 
 ]
 Appendix A.
-[9] [10
+[13] [14
 
 ]
 Appendix B.
-[11] (Bachelor Thesis Daniel Netzl.aux)
+[15] (Bachelor Thesis Daniel Netzl.aux)
 
-Package rerunfilecheck Warning: File `"Bachelor Thesis Daniel Netzl".out' has c
-hanged.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: Checksums for `"Bachelor Thesis Daniel Netzl".out'
-:
-(rerunfilecheck)             Before: D96BFF6DD4436491B9527ECF1CAC8A99;2521
-(rerunfilecheck)             After:  7C9FCE1E90F9DABD9997994F024613E0;3302.
+Package rerunfilecheck Info: File `"Bachelor Thesis Daniel Netzl".out' has not 
+changed.
+(rerunfilecheck)             Checksum: A499036852FAAA245E7AF06830979D96;3324.
  ) 
 Here is how much of TeX's memory you used:
- 14092 strings out of 478659
- 224394 string characters out of 2845921
- 703977 words of memory out of 3000000
- 31913 multiletter control sequences out of 15000+600000
+ 14112 strings out of 478659
+ 224685 string characters out of 2845921
+ 704147 words of memory out of 3000000
+ 31924 multiletter control sequences out of 15000+600000
  468299 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,77p,768b,1232s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,10n,77p,1245b,1232s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/netzl/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:
 /Users/netzl/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:
 /Users/netzl/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:
@@ -753,9 +755,9 @@ l/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/netz
 l/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/n
 etzl/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/User
 s/netzl/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on "Bachelor Thesis Daniel Netzl.pdf" (19 pages, 204393 bytes).
+Output written on "Bachelor Thesis Daniel Netzl.pdf" (25 pages, 222704 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
- 142 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 78 named destinations out of 1000 (max. 500000)
+ 190 words of extra memory for PDF output out of 10000 (max. 10000000)
 
