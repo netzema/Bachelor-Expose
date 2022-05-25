@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.2)  25 MAY 2022 16:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.2)  25 MAY 2022 19:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -587,47 +587,37 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 24.
  [3]
-[4
-
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 31.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 31.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 31.
- [5] (Bachelor Thesis Daniel Netzl.toc)
+(Bachelor Thesis Daniel Netzl.toc)
 \tf@toc=\write4
 \openout4 = `"Bachelor Thesis Daniel Netzl.toc"'.
 
- [6] [7]
-(Bachelor Thesis Daniel Netzl.lot)
+ [4] [5] (Bachelor Thesis Daniel Netzl.lot)
 \tf@lot=\write5
 \openout5 = `"Bachelor Thesis Daniel Netzl.lot"'.
 
- [8
+
+[6
 
 ] (Bachelor Thesis Daniel Netzl.lof)
 \tf@lof=\write6
 \openout6 = `"Bachelor Thesis Daniel Netzl.lof"'.
 
+ [7
 
-[9
-
-] [10
+] [8
 
 
 ]
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 5
-8.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 4
+5.
 (C:\Users\netzl\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <24.88> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 58.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 45.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <90> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 58.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 45.
  [1
 
 ]
@@ -635,105 +625,115 @@ LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <90> not available
 Chapter 2.
 [3
 
-] [4] [5] [6]
+] [4] [5] [6
+
+]
 Chapter 3.
+[7] [8] [9] [10
+
+]
+Chapter 4.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-26.
+40.
 (C:\Users\netzl\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (C:\Users\netzl\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Overfull \hbox (5.58446pt too wide) in paragraph at lines 137--138
+Overfull \hbox (5.58446pt too wide) in paragraph at lines 151--152
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-LaTeX Warning: Reference `chap:introduction' on page 7 undefined on input line 
-142.
+LaTeX Warning: Reference `chap:introduction' on page 11 undefined on input line
+ 156.
 
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 156.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 156.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 156.
 
 Underfull \vbox (badness 4967) has occurred while \output is active []
 
- [7
-
-]
-[8]
+ [11]
+[12]
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-68.
+82.
  (C:\Users\netzl\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 File: imclogo.png Graphic file (type png)
 <use imclogo.png>
-Package pdftex.def Info: imclogo.png  used on input line 191.
+Package pdftex.def Info: imclogo.png  used on input line 205.
 (pdftex.def)             Requested size: 433.62001pt x 99.742pt.
 File: imclogo.png Graphic file (type png)
 <use imclogo.png>
-Package pdftex.def Info: imclogo.png  used on input line 204.
+Package pdftex.def Info: imclogo.png  used on input line 218.
 (pdftex.def)             Requested size: 173.44865pt x 39.89426pt.
 File: imclogo.png Graphic file (type png)
 <use imclogo.png>
-Package pdftex.def Info: imclogo.png  used on input line 211.
+Package pdftex.def Info: imclogo.png  used on input line 225.
 (pdftex.def)             Requested size: 173.44865pt x 39.89426pt.
 
-Overfull \hbox (2.54398pt too wide) in paragraph at lines 201--215
+Overfull \hbox (2.54398pt too wide) in paragraph at lines 215--229
 [][] [] 
  []
 
 
-Underfull \hbox (badness 5652) in paragraph at lines 226--226
+Underfull \hbox (badness 5652) in paragraph at lines 240--240
 []\T1/phv/m/n/12 Country Name
  []
 
 
-Underfull \hbox (badness 2726) in paragraph at lines 226--226
+Underfull \hbox (badness 2726) in paragraph at lines 240--240
 []\T1/phv/m/n/12 ISO AL-PHA 2
  []
 
 
-Underfull \hbox (badness 2726) in paragraph at lines 226--226
+Underfull \hbox (badness 2726) in paragraph at lines 240--240
 []\T1/phv/m/n/12 ISO AL-PHA 3
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 []\T1/phv/m/n/12 ISO nu-meric
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--232
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 []\T1/phv/m/n/12 American
  []
 
-[9] [10] (Bachelor Thesis Daniel Netzl.bbl
+[13] [14] (Bachelor Thesis Daniel Netzl.bbl
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 26.
-) [11
+) [15
 
 
-] [12
+] [16
 
 ]
 Appendix A.
-[13] [14
+[17] [18
 
 ]
 Appendix B.
-[15] (Bachelor Thesis Daniel Netzl.aux)
+[19] (Bachelor Thesis Daniel Netzl.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `"Bachelor Thesis Daniel Netzl".out' has not 
 changed.
-(rerunfilecheck)             Checksum: A499036852FAAA245E7AF06830979D96;3324.
+(rerunfilecheck)             Checksum: 27B2FD0BBA26E6F7BB7B39962852CE4F;3302.
  ) 
 Here is how much of TeX's memory you used:
- 14112 strings out of 478659
- 224685 string characters out of 2845921
- 704147 words of memory out of 3000000
- 31924 multiletter control sequences out of 15000+600000
+ 14118 strings out of 478659
+ 224710 string characters out of 2845921
+ 704218 words of memory out of 3000000
+ 31925 multiletter control sequences out of 15000+600000
  468299 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,77p,1245b,1232s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -755,9 +755,9 @@ l/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/netz
 l/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/n
 etzl/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/User
 s/netzl/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on "Bachelor Thesis Daniel Netzl.pdf" (25 pages, 222704 bytes).
+Output written on "Bachelor Thesis Daniel Netzl.pdf" (27 pages, 226175 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 78 named destinations out of 1000 (max. 500000)
+ 375 PDF objects out of 1000 (max. 8388607)
+ 83 named destinations out of 1000 (max. 500000)
  190 words of extra memory for PDF output out of 10000 (max. 10000000)
 

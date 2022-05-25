@@ -2,12 +2,12 @@
 
 \title{Implementation and analysis of a machine learning approach to long-term values investing}
 \subtitle{Minimize risk while maximizing cash flow through stock picking based on fundamental company data}
-\thesistype{Bachelor Thesis} % or Bachelor Expos\'e
+\thesistype{Bachelor Expos\'e} % or Bachelor Expos\'e
 \author{Daniel Netzl}
-\supervisor{Dr. Supervisor Musterfrau}
+\supervisor{Dr. Rubén Ruiz Torrubiano}
 \copyrightyear{2021}
 \submissiondate{19.04.2023}
-\keywords {Data Analytics, Machine Learning, Stock Market, Value Investing, Data Mining} % add keywords here 
+\keywords {Data Analytics, Machine Learning, Stock Market, Value Investing, Data Mining, Deep Learning, Defensive Investing, Data Science, Random Forest, Neural Network} % add keywords here 
 
 
 
@@ -22,19 +22,6 @@
 
 
 \begin{declarations}\end{declarations}
-
-
-
-\begin{abstract}
-	Abstract paragraphs should be unindented. Abstract text must fit on a single page. Try to present the essence of your work here. 
-	
-	According to Wikipedia\footnote{https://en.wikipedia.org/}, An abstract is a brief summary of a research article, thesis, review, conference proceeding, or any in-depth analysis of a particular subject and is often used to help the reader quickly ascertain the paper's purpose \cite{988366}. When used, an abstract always appears at the beginning of a manuscript or typescript, acting as the point-of-entry for any given academic paper or patent application. Abstracting and indexing services for various academic disciplines are aimed at compiling a body of literature for that particular subject.
-	
-	It is usually not a good practice to include references and footnotes in an abstract. Abstracts must be independent of other works, concise and complete in itself. 
-	
-	It is also possible to write structured abstracts. These are abstracts with distinct, labeled sections (e.g., Introduction, Methods, Results, Discussion), which makes it easier for the reader to navigate easily through the content. 
-	
-\end{abstract}
 
 
 \addtoToC{Table of Contents}%
@@ -85,6 +72,33 @@ Value investing aims to identify stocks that have been overlooked and are conseq
 Even yet, the concept of value investing is unlikely to turn anyone into a profitable value investor. Hard work and tight discipline are required for value investment. Only a small percentage of people are willing and able to devote the necessary time and effort, and only a small percentage of people have the right mindset to be successful in the long run. Because those virtues are becoming increasingly rare as the modern environment becomes more dynamic, the algorithm under investigation tries to aid in making value investing accessible to a wider audience.
 
 Naturally, this paper will not present a foolproof investment method. It will not guarantee any profits in advance, but it will highlight the personal risk that everyone must analyze before making investing decisions. The presented theory, as well as the algorithm developed, do not offer any financial advice or suggestions. The algorithm's signals are nothing more than the results of various calculations that, according to the inventor, might be utilized to aid in the discovery of undervalued companies. It is entirely up to the readers to decide how they will use the material.
+
+\chapter{Goal}\label{goal}
+The purpose of this bachelor's thesis is to create an algorithm that aids in the making of sound financial decisions. When a selection outperforms its benchmark, the Vanguard FTSE All-World High Dividend Yield Index, in the long run, it is regarded good. During the implementation phase, the author will look for ways to automate the above-mentioned value investing investment technique. The algorithm's foundation will be fundamental company data and its result will be one of three signals: "Buy," "Hold," or "Sell." Please keep in mind that the algorithm only sends out signals based on the data it receives and the machine learning model that was trained on that data. The final product is not a professional investment advice.
+The thesis will be regarded successful if the algorithm can consistently exceed its benchmark. The author will see the Efficient Market Theorem refuted in this scenario.
+
+If the target is not accomplished, the author will adhere to the passive investment technique and invest in index funds on a regular basis. In this sense, the author accepts average returns and is unable to disprove the Efficient Market Theorem.
+
+On the road to developing the algorithm the author will examine appropriate machine learning approaches for creating the basis for value investing. Additionally, important features needed for the prediction of the intrinsic value of a company will be determined. This way the author hopes to uncover undervalued companies whose stock prices will increase to a higher extent than the benchmark index.
+
+The machine learning model will utilize backpropagation on historical data to update weights on various features in order to determine the importance of each for predicting the intrinsic value.
+
+It is critical that the model works well over a long period of time, i.e., continuously throughout several years. Short-term success is typically based on luck and cannot be replicated. Technical analysis for speculative short-term stock movement predictions will not be covered in the thesis. The model's results will be assessed on a yearly basis.
+The above-mentioned problem statement and goals allow the formulation of the following research questions:
+
+\begin{enumerate}
+	\item Can a machine learning model based on qualitative and quantitative fundamental company data reliably and accurately predict the intrinsic value of a company?
+	\item Can the identified undervalued stocks be used to consistently beat the market and thus disprove the efficient market theorem?
+\end{enumerate}
+
+The following risks are anticipated throughout the thesis:
+
+\begin{enumerate}
+	\item What qualitative measures should be used to calculate intrinsic value?
+	\item How can a machine learning technology be used to uncover patterns of undervalued stocks?
+	\item How to appropriately assess the model's success within a given time frame and update the model accordingly?
+\end{enumerate}
+
 
 
 \section{State of the art}

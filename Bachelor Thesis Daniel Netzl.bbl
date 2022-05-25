@@ -21,11 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{988366}
-B.~{Huettner}, ``The elements of technical writing (2nd ed.) - book review,''
-  \emph{IEEE Transactions on Professional Communication}, vol.~45, no.~1, pp.
-  59--60, 2002.
-
 \bibitem{margin_of_safety}
 S.~Klarman, \emph{Margin of Safety: Risk-averse Value Investing Strategies for
   the Thoughtful Investor}.\hskip 1em plus 0.5em minus 0.4em\relax {Harper
@@ -33,11 +28,11 @@ S.~Klarman, \emph{Margin of Safety: Risk-averse Value Investing Strategies for
 
 \bibitem{security_analysis}
 B.~Graham and D.~Dodd, \emph{Security Analysis}.\hskip 1em plus 0.5em minus
-  0.4em\relax {Whittlesey House}, 1951.
+  0.4em\relax {McGraw-Hill Education - Europe}, 1940.
 
 \bibitem{the_intelligent_investor}
 B.~Graham, \emph{The Intelligent Investor}.\hskip 1em plus 0.5em minus
-  0.4em\relax {Harper \& Brothers}, 1949.
+  0.4em\relax {Harper \& Brothers}, 1973.
 
 \bibitem{DBLP:journals/access/BurchHWPWH21}
 \BIBentryALTinterwordspacing
@@ -46,6 +41,11 @@ M.~Burch, W.~Huang, M.~Wakefield, H.~C. Purchase, D.~Weiskopf, and J.~Hua,
   visualizations,'' \emph{{IEEE} Access}, vol.~9, pp. 4173--4198, 2021.
   [Online]. Available: \url{https://doi.org/10.1109/ACCESS.2020.3047616}
 \BIBentrySTDinterwordspacing
+
+\bibitem{988366}
+B.~{Huettner}, ``The elements of technical writing (2nd ed.) - book review,''
+  \emph{IEEE Transactions on Professional Communication}, vol.~45, no.~1, pp.
+  59--60, 2002.
 
 \bibitem{DBLP:conf/euromicro/DhunganaHW20}
 \BIBentryALTinterwordspacing

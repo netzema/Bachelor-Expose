@@ -1,23 +1,23 @@
 \contentsline {chapter}{Declaration of honour}{iii}{section*.2}%
-\contentsline {chapter}{Abstract}{iv}{section*.3}%
-\contentsline {chapter}{Table of Contents}{vi}{section*.5}%
-\contentsline {chapter}{List of Tables}{viii}{section*.6}%
-\contentsline {chapter}{List of Figures}{ix}{section*.7}%
+\contentsline {chapter}{Table of Contents}{iv}{section*.3}%
+\contentsline {chapter}{List of Tables}{vi}{section*.4}%
+\contentsline {chapter}{List of Figures}{vii}{section*.5}%
 \contentsline {chapter}{\numberline {1}Motivation}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Problem definition}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}State of the art}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Background}{5}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Model}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Experimental Setup/Implementation}{6}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Evaluation Plan}{6}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Conclusion/Summary}{6}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Example Chapter}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Code and syntax highlighting}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Labels and References}{8}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Mathematical Equations and Expressions}{8}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Enumerations and Descriptions}{8}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Adding images}{9}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Tables}{10}{section.3.6}%
-\contentsline {chapter}{Bibliography}{11}{section*.11}%
-\contentsline {chapter}{Appendix \numberline {A}Example Appendix 1}{13}{appendix.a.A}%
-\contentsline {chapter}{Appendix \numberline {B}Example Appendix 2}{15}{appendix.a.B}%
+\contentsline {chapter}{\numberline {3}Goal}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}State of the art}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Background}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Model}{8}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Experimental Setup/Implementation}{9}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Evaluation Plan}{9}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Conclusion/Summary}{9}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Example Chapter}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Code and syntax highlighting}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Labels and References}{12}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Mathematical Equations and Expressions}{12}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Enumerations and Descriptions}{12}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Adding images}{13}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Tables}{14}{section.4.6}%
+\contentsline {chapter}{Bibliography}{15}{section*.9}%
+\contentsline {chapter}{Appendix \numberline {A}Example Appendix 1}{17}{appendix.a.A}%
+\contentsline {chapter}{Appendix \numberline {B}Example Appendix 2}{19}{appendix.a.B}%
