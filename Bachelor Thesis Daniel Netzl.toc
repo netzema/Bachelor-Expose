@@ -1,7 +1,6 @@
 \contentsline {chapter}{Declaration of honour}{iii}{section*.2}%
 \contentsline {chapter}{Table of Contents}{iv}{section*.3}%
-\contentsline {chapter}{List of Tables}{v}{section*.4}%
-\contentsline {chapter}{List of Figures}{vi}{section*.5}%
+\contentsline {chapter}{List of Figures}{v}{section*.4}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Problem Definition}{2}{section.1.2}%
@@ -10,14 +9,15 @@
 \contentsline {subsection}{\numberline {1.4.1}Data}{7}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Implementation Plan}{7}{subsection.1.4.2}%
 \contentsline {subsection}{\numberline {1.4.3}Machine Learning Models}{8}{subsection.1.4.3}%
-\contentsline {subsection}{\numberline {1.4.4}Training and Test Set}{8}{subsection.1.4.4}%
-\contentsline {subsection}{\numberline {1.4.5}Evaluation Plan}{9}{subsection.1.4.5}%
-\contentsline {section}{\numberline {1.5}Code and syntax highlighting}{10}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Labels and References}{10}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Mathematical Equations and Expressions}{10}{section.1.7}%
-\contentsline {section}{\numberline {1.8}Enumerations and Descriptions}{11}{section.1.8}%
-\contentsline {section}{\numberline {1.9}Adding images}{12}{section.1.9}%
-\contentsline {section}{\numberline {1.10}Tables}{12}{section.1.10}%
-\contentsline {chapter}{Bibliography}{13}{section*.11}%
-\contentsline {chapter}{Appendix \numberline {A}Example Appendix 1}{15}{appendix.a.A}%
-\contentsline {chapter}{Appendix \numberline {B}Example Appendix 2}{17}{appendix.a.B}%
+\contentsline {subsubsection}{Discounted Cash Flow}{9}{subsubsection*.6}%
+\contentsline {subsubsection}{Benjamin Graham Number}{9}{subsubsection*.7}%
+\contentsline {subsubsection}{Earnings Power Value}{10}{subsubsection*.8}%
+\contentsline {subsubsection}{Neural Network}{11}{subsubsection*.9}%
+\contentsline {subsubsection}{Random Forest}{12}{subsubsection*.12}%
+\contentsline {subsubsection}{Ordinary Least Squares}{13}{subsubsection*.13}%
+\contentsline {subsubsection}{Lasso Regression}{13}{subsubsection*.14}%
+\contentsline {subsection}{\numberline {1.4.4}Training and Test Set}{14}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Evaluation Plan}{14}{subsection.1.4.5}%
+\contentsline {section}{\numberline {1.5}State of the Art}{14}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Conclusion}{15}{section.1.6}%
+\contentsline {chapter}{Bibliography}{16}{section*.15}%

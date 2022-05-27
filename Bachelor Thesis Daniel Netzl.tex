@@ -1,13 +1,13 @@
 \documentclass{imc-inf}
 \usepackage{graphicx}
 
-\title{Implementation and analysis of a machine learning approach to long-term values investing}
-\subtitle{Minimize risk while maximizing cash flow through stock picking based on fundamental company data}
+\title{Implementation and Analysis of a Machine Learning Approach to long-term Value Investing}
+\subtitle{Minimize Risk while Maximizing Cash Flow through Stock Picking Based on Fundamental Company Data}
 \thesistype{Bachelor Expos\'e} % or Bachelor Expos\'e
 \author{Daniel Netzl}
 \supervisor{Dr. Rubén Ruiz Torrubiano}
 \copyrightyear{2021}
-\submissiondate{19.04.2023}
+\submissiondate{15.06.2022}
 \keywords {Data Analytics, Machine Learning, Stock Market, Value Investing, Data Mining, Deep Learning, Defensive Investing, Data Science, Random Forest, Neural Network} % add keywords here 
 
 
@@ -30,9 +30,9 @@
 \clearpage
 
 
-\addtoToC{List of Tables}%
-\listoftables
-\clearpage
+%\addtoToC{List of Tables}%
+%\listoftables
+%\clearpage
 
 
 \addtoToC{List of Figures}%
@@ -132,13 +132,18 @@ The author purposefully includes a huge number of variables from the balance she
 
 \subsection{Implementation Plan}%figure which shows the pipeline of the whole process
 
+Python and R will be the primary programming languages used throughout the pipeline. While R will be utilized for the first two phases of the project, namely data collection and processing, Python will be used mostly for the modeling and assessment processes.
+
+The data gathering phase is the initial step in the algorithm's implementation. The author will endeavor to collect as much financial data as possible during this time. The APIs YahooFinance and Finviz.com are the most common data providers. Data for the balance sheet, income statement, and cash flow statement will be retrieved and saved in a data frame for each firm and period. Sources for qualitative corporate data will also be sought and researched. If a reliable source is discovered, it will be included to the data collection. One of the most important jobs at that phase will be to locate such sources.
+
+During the processing step, data is prepared for additional calculations and modeling, while the modeling phase trains, tunes, and tests various machine learning algorithms. In the evaluation phase, the models' ideal structures will be evaluated. During the latter, it is easy to observe that errors were committed at some point in the pipeline, resulting in steps being reversed.
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1.0\textwidth]{resources/pipeline.drawio}
-	\caption{Implementation plan}
+	\caption{Implementation Plan}
 	\label{fig:pipeline}
 \end{figure}
-
 
 \subsection{Machine Learning Models}%figure which explains the model in detail
 The machine learning algorithms used in the study include a variety of models that have become increasingly popular in recent years. A Neural Network and a Random Forest model for regression are among them. To benchmark these two models, simpler linear models are used. These include an Ordinary Least Square (OLS) and a Least Absolute Shrinkage and Selection Operator (Lasso) linear regression. As all the models require some dependent variable $y$, the author will make use of two different approaches. 
@@ -147,10 +152,37 @@ First, static equations will be employed to determine a company's fair worth usi
 
 The other approach will involve a self-created program which will label the data entries automatically based on the development of the stock prize a year after. If the stock rose higher than the benchmark, the label will be “Buy”. If the price rose significantly less, whereas different thresholds will be tried out, or even decreased over the period of one year, the label will be “Sell”. Everything in between will be labeled as “Hold”. These labels will be used to validate the output of the machine learning algorithm.
 
+Before introducing the machine learning models applied during the study, a short introduction on the methods to estimate the fair value of an issue will be provided.
 
-Explain DCF, Graham Formula, EPV
+\subsubsection{Discounted Cash Flow}
+The Discounted Cash Flow (DCF) valuation is one of the most popular formulae among value investors, as it is considered one of the best methods for estimating the intrinsic value. One significant advantage of the DCF valuation over earnings-based values is that earnings can be readily manipulated to boost reputation or reduce tax burden, whereas cash flows are just the leftovers that can be used for a variety of purposes. The DCF calculates the investment's value using future cash flows, or the amount of money the investment will earn in the future. Future cash flows are forecasted and discounted to the present. The DCF yields a value that should be lower than the asset's current market value in order for it to be considered a prospective investment ~\cite{dcf}.
+One disadvantage of the DCF is that it is based on a variety of assumptions, including the cash flow growth rate, discount rate, and terminal rate, all of which will be utilized to establish the DCF's final value ~\cite{dcf}.
+Looking at past cash flows and continuing the trend into the future is one technique to assess the growth rate. However, keep in mind that no "ideal" rate exists because no one can predict the future ~\cite{dcf}.
+The discount rate is calculated using the weighted average cost of capital (WACC). The WACC is in its essence nothing more then the weighted average of a company’s cost of debt and cost of equity ~\cite{dcf}. The implementation of DCF and hence also WACC will be provided in a later chapter, as there might be the need to so adjustments to fit the purpose of this paper.
 
-Explain Neural Network
+\subsubsection{Benjamin Graham Number}
+The Graham Number, like any other stock valuation technique, will include assumptions, resulting in a range of possible values. The following is the original Graham Formula from Security Analysis ~\cite{security_analysis}:
+$$V = EPS * (8.5 + 2g)$$
+where $V$ is the intrinsic value, $EPS$ the trailing twelve-month EPS, $8.5$ the Price-to-Earnings (PE) ratio of a no-growth investment and $g$ being the growth rate for the next seven to ten years. Even yet, the intrinsic worth should not be determined only on a single twelve-month period, which is why the author uses Old School Value’s ~\cite{ben_graham_formula} technique. The issue with the Graham Number is that it is heavily reliant on the PE, which can be anything one considers to be correct. Nonetheless, according to Old School Value ~\cite{ben_graham_formula}, any value between 7 and 8.5 is a reasonable fit for no-growth businesses. Alternatively, the analyst's five-year growth rate projections might be used ~\cite{ben_graham_formula}.
+In addition, the $2g$ multiplier will be decreased to 1 in order to reduce the growth rate's aggressiveness and produce results that are more in line with the present market situation ~\cite{ben_graham_formula}. The function that is built to implement the Graham Number computation will be given later.
+
+\subsubsection{Earnings Power Value}
+Three factors must be considered when calculating the Earnings Power Value (EPV):
+
+\begin{enumerate}
+	\item The worth of assets that a rival must have in order to acquire the same market value as the firm being studied.
+	\item The value of earnings power is calculated using current financial data.
+	\item Whether or not growth is important, as it is frequently overlooked.
+\end{enumerate}
+
+The EPV necessitates making changes to the balance sheet and income statement. The result of the EPV calculations is the amount a competitor must spend to compete with the company under investigation. Although it is critical to compare the EPV with other valuation approaches, it is still a useful tool to have in any investor's toolbox ~\cite{epv}.
+
+All the above mentioned metrics will be averaged and decreased by the margin of safety, which equals at least the average yearly return of the benchmark index, to get an estimation of the intrinsic value based on above-mentioned static calculations.
+
+During the study the following machine learning techniques will be employed.
+
+\subsubsection{Neural Network}
+A Neural Network is nothing more than a collection of mathematical equations linked together. Input data in form of a vector traverse the network of equations to generate a vector of outputs ~\cite{nn_intro}.
 
 \begin{figure}[h]
 	\centering
@@ -159,134 +191,53 @@ Explain Neural Network
 	\label{fig:neural_network}
 \end{figure}
 
-Explain Random Forest
+The input layer, one or more hidden layers, and an output layer are the three layers that make up the structure. The independent variables make up the input layer. Those variables are denoted as $x_{1}$ to $x_{n}$ in the graph below, and they comprise of each company's quantitative and qualitative data. As a result, n denotes the number of companies that are being investigated. Please keep in mind that, despite the fact that the data set currently contains 408 companies, a lack of data may cause several of them to be removed again ~\cite{nn_intro}.
+
+The hidden layers are made up of one or more hidden nodes or neurons. Both a linear and an activation function can be found in these neurons. The linear function is simply a line of best fit, but the activation function controls whether or not a single neuron's linear function is used. As a result, each node determines which nodes in the adjacent layer are activated until it reaches an output. In terms of concept, that is the essence of a neural network ~\cite{nn_intro}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\textwidth]{resources/nn activation.png}
+	\caption{Neural Network Architecture with Activation}
+	\label{fig:nn_intro}
+\end{figure}
+
+The activation of neurons can be seen in the figure 1.2. When a neuron turns green, it signifies it is active and allows data to pass through it.
+
+In this thesis, the author will first construct a simple neural network architecture before considering the implementation of more complex structures such as Recurrent Neural Networks (RNN) or sequence architectures such as Long-Short-Term-Memory (LSTM) in the event that the basic structure fails to comprehend the data.
+
+Several hyperparameters will be tested during the implementation process, which means that before the network starts training, alternative activation functions and different numbers of layers and neurons will be defined. This will ensure that the best neural network design is utilized to learn from the data.
+
+\subsubsection{Random Forest}
+In essence, the Random Forest algorithm is a collection of random decision trees. Each decision tree is random since it is constructed using a random sample of the original data (with replacement) and a subset of features is randomly selected at each tree node to yield the optimum split ~\cite{rf_intro}.
+
+Bootstrap aggregation, or bagging, is the term for this method of fitting a decision tree on different bootstrap samples of the training data set. Bagging is useful for a wide range of issues, and it has led to the development of powerful approaches like Random Forest. On each of those samples, or bags, a decision tree will be trained, and the predictions will be averaged in the end. Because each decision tree's training set is a little different, the prediction and prediction error are less correlated, which means that ensemble techniques like Random Forest generalize better than individual decision trees. Furthermore, the bagging technique does not tend to overfit the training data set and can be scaled until performance plateaus ~\cite{bagging}.
+
+\subsubsection{Ordinary Least Squares}
+Ordinary Least Squares (OLS) refers to a Simple Linear Regression model with the formula 
+$$y_{i} = \alpha + \beta * x_{i} + \epsilon_{i}$$
+where $\epsilon_{i}$ describes the error term, and alpha and beta are the parameters of the regression. The latter describes the variation of the dependent variables when the independent variables have a unitary variation. The parameter alpha, on the other hand, represents the value of the dependent variable, when the independent one is equal to zero ~\cite{ols_intro}.
+
+The goal is to determine the alpha and beta parameters that minimize the error term. Because negative and positive errors punish the model in the same way, OLS refers to the error terms being squared ~\cite{ols_intro}.
+
+\subsubsection{Lasso Regression}
+The Least Absolute Shrinkage and Selection Operator (Lasso) is a regularization approach that prevents regression models from overfitting. Regularization is the process of punishing the best model in order to acquire one that is more generalizable. It also uses shrinkage, which is the process of compressing data values towards the mean, to limit the influence of independent variables. For extremely multicollinear features, the lasso approach is an excellent fit. It also performs feature selection, making it an excellent fit if the data set contains a large number of features ~\cite{lasso_intro}.
 
 \subsection{Training and Test Set}
 The training set will contain the quantitative and qualitative fundamental data of each company at the end of each year. This way the time dimension is deliberately left out as (1) that simplifies the models and (2) there is nothing worth remembering from the past. The models analyze current data only and try to estimate a stock’s fair price.  For training purposes 90 percent of the available data will be used, while the remaining 10 percent are used to test the models. 
 
-
 \subsection{Evaluation Plan}%figure which shows a graph comparing benchmark and a selected stock
 A one-year sliding window is used to create the training and test sample for our models. This pane navigates through all the companies in our sample period's records history. Let $P_{t}$ be the price of an issue at any point in time when the algorithm issues a "Buy" signal. Then $P_{t+1}$ represents the price after one year of holding the paper, emulating the purchase of a stock. By subtracting $P_{t}$ from $P_{t+1}$, the return $R_{s,t}$, denoting the return of the individual stock at time $t$, is determined. The result is in continuation compared to the return $R_{i,t}$ of the benchmark index in that exact same time frame. If $R_{s,t_{1}}$ > $R_{i,t_{1}}$ the prediction is considered successful for $t_{1}$. Returns are evaluated until $t_{n}$, where $n$ signifies the last possible complete, i.e., the most recent time frame. The sliding window continues for every year thereafter and after each year, and in total after $t_{n}$, the returns are compared. Once the stock's signal switches to "Sell," the algorithm will cease predicting and calculate $R_{s,t}$ and $R_{i,t}$ to complete the evaluation early.
 
+\section{State of the Art}%\label{state_of_the_art}
+According to the author's research, very little has been done in the field of study. The majority of present research is based on high-frequency trading and short-term price fluctuations. Only a few strategies concentrate on long-term value investment. The difficulty in determining and translating qualitative company evaluation metrics for machines appears to be one of the reasons for the scarcity of related work.
 
-\section{Code and syntax highlighting}
+Nonetheless, the author wishes to draw attention to the work done by Amel-Zadeh et al. ~\cite{ml-based_fin_statement_analysis}. This paper explored the capabilities of various machine learning algorithms to forecast abnormal stock returns around earnings releases solely based on financial statement data. Similar to this study, Amel-Zadeh et al. ~\cite{ml-based_fin_statement_analysis} focused their study on a neural network architecture and a Random Forest regression and benchmarked it to the OLS linear regression and Lasso regression. As can be seen in the results, the non-linear methods were able to correctly anticipate the direction of various market reactions to earnings announcements. The models created in that study will be used as reference for this paper ~\cite{ml-based_fin_statement_analysis}.
 
-You may sometimes want to add code snippets to your thesis. You can do so by using \texttt{lstlisting}. Use this with care, as code should not be extensively presented in the thesis. Here is an example. 
+It is vital to emphasize that the goal of this study is not only to estimate the magnitude of immediate price reactions to earnings announcements, but also to determine a company's fair worth. As a result, the current study differs significantly from the previous one. In addition, qualitative data sources will be searched in the hopes of uncovering more important features that can be used to evaluate a stock's intrinsic value.
 
-\begin{lstlisting}[language=Python]
-def addition ():
-    print("I am adding numbers here!")
-    n = float(input("Enter the number: "))
-    t = 0 // Total number enter
-    ans = 0
-    while n != 0:
-        ans = ans + n
-        t+=1
-        n = float(input("Enter another number (0 to end): "))
-    return [ans,t]
-\end{lstlisting}
-
-\section{Labels and References}
-See \autoref{chap:introduction} for interesting stuff and see a cool logo in \autoref{fig:logo}. If you are still not convinced, try adding a footnote\footnote{did you like it?}. Its easy to add citations, just use a bibtex file to list your references and cite them here like this~\cite{988366}. If you want to read a cool paper~\cite{DBLP:conf/euromicro/DhunganaHW20}, just contact the author of the paper. Haha, that was funny! 
-
-
-\section{Mathematical Equations and Expressions}
-Basic equations in  \LaTeX{} can be easily "programmed". Fermat's Last Theorem (sometimes called Fermat's conjecture, especially in older texts) states that no three positive integers a, b, and c satisfy the equation \[ a^n + b^n = c^n \] for any integer value of $n$ greater than $2$. The cases $n = 1$ and  $n = 1$  have been known since antiquity to have infinitely many solutions. And because its so much fun, here is an integral for you - thank me later!  
-
-\[ \int\limits_0^1 x^2 + y^2 \ dx \]
-
-Do you want a more complex formula, I have no idea what it means, but it looks pretty. 
-
-\[\oint_{i=1}^n \sum_{i=1}^{\infty} \frac{1}{n^s} 
-= \prod_p \frac{1}{1 - p^{-s}} \]
-
-
-\section{Enumerations and Descriptions}
-Here is a simple list: 
-\begin{enumerate}
-	\item The labels consists of sequential numbers.
-	\item The numbers starts at 1 with every call to the enumerate environment.
-\end{enumerate}
-
-Here is another list: 
-
-\begin{enumerate}
-	\item The labels consists of sequential numbers.
-	\begin{itemize}
-		\item The individual entries are indicated with a black dot, a so-called bullet.
-		\item The text in the entries may be of any length.
-	\end{itemize}
-	\item The numbers starts at 1 with every call to the enumerate environment.
-\end{enumerate}
-
-Maybe such descriptions are also useful. These look neat to me. What do you think? Oh, I forgot, this document is not a tutorial. 
-\begin{description}
-	\item[Short] This is a shorter item label, and some text that talks
-	about it. The text is wrapped into a paragraph, with successive
-	lines indented.
-	\item[Rather longer label] This is a longer item label.  As you can
-	see, the text is not started a specified distance in -- unlike
-	with other lists -- but is spaced a fixed distance from the end
-	of the label.
-\end{description}
-
-
-
-\section{Adding images}
-Adding a simple image is easy. Adding complex images is also easy. What is a complex image anyway? 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1.0\textwidth]{imclogo.png}
-	\caption{IMC Logo}
-	\label{fig:logo}
-\end{figure}
-
-
-
-
-
-\begin{figure}[ht]
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		% include first image
-		\includegraphics[width=.8\linewidth]{imclogo.png}  
-		\caption{Put your sub-caption here}
-		\label{fig:sub-first}
-	\end{subfigure}
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		% include second image
-		\includegraphics[width=.8\linewidth]{imclogo.png}  
-		\caption{Put your sub-caption here}
-		\label{fig:sub-second}
-	\end{subfigure}
-	\caption{Including sub images! }
-	\label{fig:fig}
-\end{figure}
-
-\section{Tables}
-
-\begin{table}[ht]
-\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
-	\hline
-	\multicolumn{4}{|c|}{Country List} \\
-	\hline
-	Country Name     or Area Name& ISO ALPHA 2 Code &ISO ALPHA 3 Code&ISO numeric Code\\
-	\hline
-	Afghanistan   & AF    &AFG&   004\\
-	Aland Islands&   AX  & ALA   &248\\
-	Albania &AL & ALB&  008\\
-	Algeria    &DZ & DZA&  012\\
-	American Samoa&   AS  & ASM&016\\
-	Andorra& AD  & AND   &020\\
-	Angola& AO  & AGO&024\\
-	\hline
-\end{tabular}
-\caption{\label{tab:table-name}Example table}
-\end{table}
-
-
-
+\section{Conclusion}
+The research is being carried out in the hopes of establishing an automated method of investing defensively and accurately identifying inexpensive equities. If successful, this research might be a breakthrough in the field of automated value investing. As very few strategies appear to be successful when applied to financial market predictions the job to be done is regarded difficult to complete. Nonetheless, the author is hopeful that his methods will produce acceptable outcomes and will be more than delighted with the study's conclusion if it attracts attention and serves as a foundation for future research in the field.
 
 %   BACK MATTER  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -305,15 +256,4 @@ Adding a simple image is easy. Adding complex images is also easy. What is a com
 	\bibliographystyle{IEEEtran}
 	\bibliography{references}
 	
-
-\begin{appendices} % optional
-\chapter{Example Appendix 1}
-
-Appendices should be used for supplemental information that does not form part of the main research. Remember that figures and tables in appendices should not be listed in the List of Figures or List of Tables. 
-
-\chapter{Example Appendix 2}
-
-Appendices should be used for supplemental information that does not form part of the main research. Remember that figures and tables in appendices should not be listed in the List of Figures or List of Tables. 
-	
-\end{appendices}
 \end{document}

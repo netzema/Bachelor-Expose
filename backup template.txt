@@ -1,0 +1,133 @@
+\section{Code and syntax highlighting}
+
+You may sometimes want to add code snippets to your thesis. You can do so by using \texttt{lstlisting}. Use this with care, as code should not be extensively presented in the thesis. Here is an example. 
+
+\begin{lstlisting}[language=Python]
+def addition ():
+    print("I am adding numbers here!")
+    n = float(input("Enter the number: "))
+    t = 0 // Total number enter
+    ans = 0
+    while n != 0:
+        ans = ans + n
+        t+=1
+        n = float(input("Enter another number (0 to end): "))
+    return [ans,t]
+\end{lstlisting}
+
+\section{Labels and References}
+See \autoref{chap:introduction} for interesting stuff and see a cool logo in \autoref{fig:logo}. If you are still not convinced, try adding a footnote\footnote{did you like it?}. Its easy to add citations, just use a bibtex file to list your references and cite them here like this~\cite{988366}. If you want to read a cool paper~\cite{DBLP:conf/euromicro/DhunganaHW20}, just contact the author of the paper. Haha, that was funny! 
+
+
+\section{Mathematical Equations and Expressions}
+Basic equations in  \LaTeX{} can be easily "programmed". Fermat's Last Theorem (sometimes called Fermat's conjecture, especially in older texts) states that no three positive integers a, b, and c satisfy the equation \[ a^n + b^n = c^n \] for any integer value of $n$ greater than $2$. The cases $n = 1$ and  $n = 1$  have been known since antiquity to have infinitely many solutions. And because its so much fun, here is an integral for you - thank me later!  
+
+\[ \int\limits_0^1 x^2 + y^2 \ dx \]
+
+Do you want a more complex formula, I have no idea what it means, but it looks pretty. 
+
+\[\oint_{i=1}^n \sum_{i=1}^{\infty} \frac{1}{n^s} 
+= \prod_p \frac{1}{1 - p^{-s}} \]
+
+
+\section{Enumerations and Descriptions}
+Here is a simple list: 
+\begin{enumerate}
+	\item The labels consists of sequential numbers.
+	\item The numbers starts at 1 with every call to the enumerate environment.
+\end{enumerate}
+
+Here is another list: 
+
+\begin{enumerate}
+	\item The labels consists of sequential numbers.
+	\begin{itemize}
+		\item The individual entries are indicated with a black dot, a so-called bullet.
+		\item The text in the entries may be of any length.
+	\end{itemize}
+	\item The numbers starts at 1 with every call to the enumerate environment.
+\end{enumerate}
+
+Maybe such descriptions are also useful. These look neat to me. What do you think? Oh, I forgot, this document is not a tutorial. 
+\begin{description}
+	\item[Short] This is a shorter item label, and some text that talks
+	about it. The text is wrapped into a paragraph, with successive
+	lines indented.
+	\item[Rather longer label] This is a longer item label.  As you can
+	see, the text is not started a specified distance in -- unlike
+	with other lists -- but is spaced a fixed distance from the end
+	of the label.
+\end{description}
+
+
+
+\section{Adding images}
+Adding a simple image is easy. Adding complex images is also easy. What is a complex image anyway? 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\textwidth]{imclogo.png}
+	\caption{IMC Logo}
+	\label{fig:logo}
+\end{figure}
+
+
+
+
+
+\begin{figure}[ht]
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		% include first image
+		\includegraphics[width=.8\linewidth]{imclogo.png}  
+		\caption{Put your sub-caption here}
+		\label{fig:sub-first}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		% include second image
+		\includegraphics[width=.8\linewidth]{imclogo.png}  
+		\caption{Put your sub-caption here}
+		\label{fig:sub-second}
+	\end{subfigure}
+	\caption{Including sub images! }
+	\label{fig:fig}
+\end{figure}
+
+\section{Tables}
+
+\begin{table}[ht]
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+	\hline
+	\multicolumn{4}{|c|}{Country List} \\
+	\hline
+	Country Name     or Area Name& ISO ALPHA 2 Code &ISO ALPHA 3 Code&ISO numeric Code\\
+	\hline
+	Afghanistan   & AF    &AFG&   004\\
+	Aland Islands&   AX  & ALA   &248\\
+	Albania &AL & ALB&  008\\
+	Algeria    &DZ & DZA&  012\\
+	American Samoa&   AS  & ASM&016\\
+	Andorra& AD  & AND   &020\\
+	Angola& AO  & AGO&024\\
+	\hline
+\end{tabular}
+\caption{\label{tab:table-name}Example table}
+\end{table}
+
+
+
+
+
+
+
+
+\begin{appendices} % optional
+\chapter{Example Appendix 1}
+
+Appendices should be used for supplemental information that does not form part of the main research. Remember that figures and tables in appendices should not be listed in the List of Figures or List of Tables. 
+
+\chapter{Example Appendix 2}
+
+Appendices should be used for supplemental information that does not form part of the main research. Remember that figures and tables in appendices should not be listed in the List of Figures or List of Tables. 
+	
+\end{appendices}
